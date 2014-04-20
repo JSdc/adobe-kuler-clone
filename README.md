@@ -1,4 +1,5 @@
 adobe-kuler-clone
+(the pixy color theme designer)
 =================
 
 I have seen many many requests over the past years for 'anyone who has a color picker similar to Adobe'.
