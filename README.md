@@ -23,6 +23,8 @@ UPCOMING FEATURES:
 
 • Color Theme Selection (hard coded, not a database like Adobe's)
 
+• RYB color selection (artist style) as opposed to RGB.
+
 
 This code was originally used as a color selection tool for a Three.js project, in order to color multiple shapes simulatenously, using colors that look good together.
 
