@@ -1,0 +1,123 @@
+<html>
+
+<script>
+
+    // The Pixy Cakes Color Theme Designer -- www.pixycakes.com
+    // by Pixy
+        
+    // We are not programmers, we are bakers! So excuse the messy code. 
+        
+        // note that most artists and cake designers use a RYB color wheel, where...
+        // this is a RGB color wheel. Because everyone uses RGB right? No.
+        // Our plans are to add RYB capabilities.
+
+    // Modeled after Adobe's Kuler color theme designer, because it's so great. (kuler.adobe.com)
+    // Although, not knowing how they created theirs, this one was baked from scratch.
+    // also designed to be much simpler than theirs, and more compact.
+        
+    // All colors are defined and saved and reloaded as "HSL" colors.
+    // (hue: expressed as radians around the circle, saturation: expressed as a range between 0 and 1 (as the Radius of the circle),
+    // and lightness: expressed as a range between 0 (black) and 100 white, so lightness value of 50% = pure color.)
+    // the external library 'tinyColor' is used to translate colors from one data set to another.
+
+</script>
+
+    <head>
+        
+        <!--jquery and jquey mobile for a quick UI-->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>  
+        
+        <!-- pixy color theme designer scripts-->
+        
+        <script src="js/tinyColor.js"></script>
+        <script src="js/pixyColorThemeDesigner.js"></script>
+        <link rel="stylesheet" href="css/kulerClone.css" />
+        
+    </head>
+    
+    <body>
+        
+    <!-- UI -->
+        
+     <div class="ui-responsive-panel" id="home" data-role="page" data-theme="a">
+           
+        <div data-role="header" > 
+            <h1>the Pixy Cakes Color Theme Designer</h1> 
+        </div> 
+            
+       <!-- <a href="#swatchListPage" data-rel="popup" class="ui-btn ui-btn-inline ui-icon-grid ui-btn-icon-left">Color Themes</a>-->
+         
+        <a href="#colorRulesList" data-rel="popup" class="ui-btn ui-btn-inline ui-icon-star ui-btn-icon-left">Color Rules</a>
+
+           <!-- color selector -->
+         
+           <!-- NOTE: the following DIV (canvasContainer) is the only set of divs required to make the wheel work. -->
+
+            <div class="unselectable" id="canvasContainer">
+
+                <div id = 'swatchContainer'> 
+                    <div class = 'swatch' id='swatch0'>0</div> 
+                    <div class = 'swatch' id='swatch1'>1</div>
+                    <div class = 'swatch' id='swatch2'>2</div>
+                    <div class = 'swatch' id='swatch3'>3</div>
+                    <div class = 'swatch' id='swatch4'>4</div>
+                 </div>
+
+                <canvas class="unselectable" id="hueWheel" width="360" height="360"></canvas>
+                <canvas class="unselectable hidden" id="slLayer" width="360" height="360"></canvas>
+                <canvas class="unselectable" id="uiLayer" width="360" height="360"></canvas>
+
+
+            </div> <!-- / color selector -->
+           
+           
+     <!-- Color Rule Selector Popup -->
+           
+            <div id="colorRulesList" data-role="popup"  data-theme="d">
+                <a href="#" data-rel="back" data-role="button" data-theme="d" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                <ul data-role="listview" style="min-width:210px;" data-theme="d">
+                    <li data-role="divider" data-theme="d">Choose a Color Rule</li>
+                    <li><a href="#">Analogous 5</a></li>
+                    <li><a href="#">Analogous 3</a></li>
+                    <li><a href="#">Split</a></li>
+                    <li><a href="#">Complementary</a></li>
+                    <li><a href="#">Triadic</a></li>
+                    <li><a href="#">Rectangle</a></li>
+                    <li><a href="#">Monochromatic</a></li>
+                    <li><a href="#">Custom</a></li>
+                </ul>
+            </div>
+
+           <!-- / Color Rule Selector Popup -->       
+           
+           
+            <!-- Color Theme Selector Popup -->
+           
+            <div id="swatchListPage" data-role="popup"  data-theme="d">
+                <a href="#" data-rel="back" data-role="button" data-theme="d" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                
+                <div id="swatchList">
+                    <!--dynamically populated-->
+                </div>
+
+            </div>
+
+           <!-- / Color Theme Selector Popup -->    
+
+        </div> <!-- // Page -->
+        
+    <script>
+    
+        
+    var themeColors = [];  
+  
+    var pixyDust = new ( pixyColorThemeDesigner );
+
+  
+    </script>
+
+</body>
+
