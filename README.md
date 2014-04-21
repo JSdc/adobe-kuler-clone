@@ -12,13 +12,17 @@ I have not looked at their code. I do not know how they created theirs. I simply
 FEATURES:
 
 • Touch support enabled 
+
 • Multiple Color Rules
+
 with the use of tinyColor.js you can switch the output to any color type (HEX, RGB, HSL, etc).
+
 • A very different "Monochromatic" color rule implementation than Kuler. On purpose. I didn't like how all their nodes bunch up on one spot on the hue wheel.
 
 UPCOMING FEATURES:
 
 • Color Theme Selection (hard coded, not a database like Adobe's)
+
 
 This code was originally used as a color selection tool for a Three.js project, in order to color multiple shapes simulatenously, using colors that look good together.
 
