@@ -15,7 +15,7 @@ FEATURES:
 
 • Multiple Color Rules
 
-with the use of tinyColor.js you can switch the output to any color type (HEX, RGB, HSL, etc).
+• with the use of tinyColor.js you can switch the output to any color type (HEX, RGB, HSL, etc).
 
 • A very different "Monochromatic" color rule implementation than Kuler. On purpose. I didn't like how all their nodes bunch up on one spot on the hue wheel.
 
