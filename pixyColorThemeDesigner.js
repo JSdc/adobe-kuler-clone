@@ -1,3 +1,6 @@
+ // by Pixy Cakes (www.pixycakes.com)
+ 
+ 
   var pixyColorThemeDesigner = function (  ) {
 
     if (window.addEventListener) {
